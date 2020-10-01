@@ -52,10 +52,12 @@ public class Cliente implements Serializable{
 	@CollectionTable(name="PERFIS")
 	private Set<Integer> perfis = new HashSet<>();
 	
+	
+	
 	public Cliente() {
 		addPerfil(Perfil.CLIENTE);
 	}
-
+	
 	public Cliente(Integer id, String nome, String email, String cpfOUcnpj, TipoCliente tipo, String senha) {
 		super();
 		this.id = id;
@@ -172,5 +174,7 @@ public class Cliente implements Serializable{
 			return false;
 		return true;
 	}
+
+
 
 }
